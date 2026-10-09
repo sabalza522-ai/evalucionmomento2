@@ -1,0 +1,275 @@
+/* estilos.css - AUREA atelier */
+/* Emprendimiento de joyería artesanal de Medellín */
+/* Taller: El Poblado - Tel 312 216 0452 - @aurea.atelier */
+
+/* Variables de colores */
+:root {
+  --oro: #C6A25A; /* Color principal - Oro */
+  --oro-claro: #E9D7A8; /* Color secundario */
+  --negro: #0E0E0E; /* Color complementario */
+  --crema: #FFF9ED; /* Fondo */
+}
+
+/* Modelo de caja */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif; /* Textos en Arial */
+  background: var(--crema);
+  color: var(--negro);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: Helvetica, sans-serif; /* Títulos en Helvetica */
+}
+
+/* REQUISITO: Imágenes ocupan espacio correctamente */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Sección encabezado */
+.encabezado {
+  display: flex; /* Flexbox para logo y menú */
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 5%;
+  background: white;
+  border-bottom: 2px solid var(--oro-claro);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+.logo span {
+  color: var(--oro);
+  font-style: italic;
+}
+
+/* Sección menú */
+.menu {
+  display: flex; /* Flexbox para enlaces */
+  gap: 15px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+.menu a {
+  text-decoration: none;
+  color: black;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.menu a:hover {
+  color: var(--oro);
+}
+
+/* Sección hero - Inicio */
+.hero {
+  display: flex; /* Flexbox dos columnas */
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 85vh;
+  background: var(--negro);
+  color: white;
+}
+.hero-texto {
+  flex: 1;
+  min-width: 300px;
+  padding: 40px 6%;
+}
+.hero-imagen {
+  flex: 1;
+  min-width: 300px;
+  height: 85vh;
+  background: url('manilla1.jpg') center/cover;
+}
+.boton {
+  display: inline-block;
+  padding: 12px 28px;
+  background: var(--oro);
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin-top: 15px;
+}
+
+/* Sección nosotros */
+.nosotros {
+  display: flex; /* Flexbox para texto e imagen */
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 80px 5%;
+  background: white;
+  align-items: center;
+}
+.nosotros-texto {
+  flex: 1;
+  min-width: 280px;
+}
+.nosotros-imagen {
+  flex: 1;
+  min-width: 280px;
+  height: 400px;
+  background: url('manilla2.jpg') center/cover;
+  border-radius: 10px;
+}
+
+/* Sección productos */
+.productos {
+  padding: 80px 5%;
+  text-align: center;
+}
+.productos-contenedor {
+  display: flex; /* Flexbox para tarjetas */
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+.producto {
+  flex: 1;
+  min-width: 260px;
+  max-width: 350px;
+  background: white;
+  padding: 15px;
+  text-align: left;
+  border: 1px solid #eee;
+}
+.producto-imagen {
+  height: 360px;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+.producto-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Sección servicios */
+.servicios {
+  padding: 70px 5%;
+  background: white;
+}
+.servicios-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+.servicios-lista {
+  flex: 1;
+  min-width: 250px;
+  list-style: none;
+}
+.servicios-lista li {
+  padding: 12px;
+  background: var(--crema);
+  margin-bottom: 8px;
+  border-left: 4px solid var(--oro);
+}
+.tabla {
+  flex: 1;
+  min-width: 300px;
+  width: 100%;
+  border-collapse: collapse;
+}
+.tabla th, .tabla td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 13px;
+}
+.tabla th {
+  background: var(--negro);
+  color: var(--oro-claro);
+}
+
+/* Sección galeria */
+.galeria {
+  padding: 70px 5%;
+  text-align: center;
+  background: var(--crema);
+}
+.galeria-contenedor {
+  display: flex; /* Flexbox para fotos */
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.galeria-contenedor img {
+  width: 280px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Sección contacto */
+.contacto {
+  display: flex; /* Flexbox para info y formulario */
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 70px 5%;
+  background: var(--oro-claro);
+}
+.contacto-info {
+  flex: 1;
+  min-width: 280px;
+}
+.contacto-formulario {
+  flex: 1;
+  min-width: 280px;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+}
+.contacto-formulario label {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.contacto-formulario input,
+.contacto-formulario select,
+.contacto-formulario textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Sección pie-pagina */
+.pie-pagina {
+  background: var(--negro);
+  color: #777;
+  text-align: center;
+  padding: 30px 5%;
+}
+
+/* Diseño responsive básico */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero-imagen {
+    height: 50vh;
+  }
+  .menu {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
